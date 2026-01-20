@@ -1,0 +1,158 @@
+html{
+    font-family: "Sofia", sans-serif;
+}
+
+/* Default (light) theme variables */
+body{
+  background-color: #d3d1d1;
+  color: #000000;
+  accent-color: #007bff;
+  transition: background-color 0.25s ease, color 0.25s ease; /* Smooth transition */
+}
+
+#myh1 {
+    text-align: center;
+    font-size: 60px;
+    color: #4CAF50;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-shadow: #000000 2px 2px 4px;
+}
+
+
+/* Black/Dark theme variables (applied when .dark-theme class is present) */
+.dark-theme {
+  background-color: #1a1a1a; 
+  color: #e1e1ff;
+  accent-color: #9a97f3;
+}
+
+
+.theme-toggle {
+    position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  background-color: #161616;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+    
+footer {
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*
+Flashing Timer Animation*/
+    @keyframes colorchange {
+        0%   { color: rgb(157, 157, 157); }
+        50%  { color: rgb(0, 0, 0); }
+        100% { color: rgb(223, 223, 223); }
+    }
+
+    .flashingTimer {
+        animation: colorchange 2s infinite alternate; 
+    } 
+
+.calculator {
+    height: 410px;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1c1c1e;
+    max-width: 500px;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-bottom:  0px;
+    text-align: right;
+    padding: 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}   
+
+input[type="button"] {
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: #888888;
+    color: #fff;
+}
+
+input[type="button"]:hover {
+    background-color: rgba(246, 246, 246, 0.8);
+}
+input[type="button"]:active {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+#clearDisplay {
+    background-color: #ff0000;
+    border: none;   
+    color: white;
+    height: 50px;
+    font-size: 1.5rem;  
+   
+}   
+#clearDisplay:hover {
+    background-color: #f62c2c;
+}   
+
+#equalsButton {
+    
+    background-color: #2da531;
+    border: none;   
+    color: white;
+    height: 50px;
+    font-size: 1.5rem;  
+    
+}
+
+#equalsButton:hover {
+    background-color: #45a049;
+}   
+
+#plusoperator, #minusoperator, #multiplyoperator, #divideoperator {
+    background-color: #eca008;
+    border: none;   
+    color: white;
+    height: 50px;
+    font-size: 1.5rem;  
+}   
+
+#plusoperator:hover, #minusoperator:hover, #multiplyoperator:hover, #divideoperator:hover {
+    background-color: #ffb731;
+}   
+#plusoperator:active, #minusoperator:active, #multiplyoperator:active, #divideoperator:active {
+    background-color: #ffb84d;
+}
